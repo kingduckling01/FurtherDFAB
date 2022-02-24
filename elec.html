@@ -49,9 +49,89 @@
         <div class="row belownav">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-                <h1 ><u><strong>Electronics Production and Design</strong></u></h1>
-                <p>Welcome to my project web page. The purpose of this website is to document my progress and journey
-                    throughout the Futher Digital Fabrication and Prototyping Fundamentals Module (EP1001)</p>
+                <h1><u><strong>Electronics Production and Design</strong></u></h1>
+                ,<br>
+                <h2>ISP Programmer</h2>
+                <p>In this part of the module, we were tasked to make a im-circuit programmer by milling and stuffing
+                    the Printed Circuit Board and test it. We were provided an example ISP PSB design from our lecturer. One image was of the traces of the ISP and the other was of the outline of PCB.</p>
+
+                <figure>
+                    <img class="img-fluid" src="./trace.png" alt="" style="margin-bottom: 1rem">
+                    <figcaption>PCB Trace</figcaption>
+                </figure>
+
+                <figure>
+                    <img class="img-fluid" src="./Outline.png" alt="">
+                    <figcaption>PCB Outline</figcaption>
+                </figure>
+
+                <p>Once we acquired the pictures, we had to generate the gcode of the PCB from <a href="https://skeatz.github.io/mods/">mods</a>, a website that our lecturer provided. To open the program, you rightclick -> programs -> open server program -> (Under G-code) mill 2D PCB PNG. This interface should pop up on your screen. </p>
+
+                <figure>
+                    <img class="img-fluid" src="./mods.jpg" alt="">
+                    <figcaption>Interface</figcaption>
+                </figure>
+
+                <p>The CNC machine we were using to mill the PCBs was the Stepcraft 420. As different machines require different settings, we had to set the different properties to specific values according to this table.</p>
+
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col">Operation</th>
+                        <th scope="col">Endmill Size</th>
+                        <th scope="col">Cut Speed</th>
+                        <th scope="col">Cut Depth</th>
+                        <th scope="col">Total Depth</th>
+                        <th scope="col">Offset</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Traces</th>
+                        <td>0.1 mm 30 deg V-bit</td>
+                        <td>50~60mm/min</td>
+                        <td>0.04 ~ 0.05 mm</td>
+                        <td>0.04 ~ 0.05 mm</td>
+                        <td>1-2</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Board Outline</th>
+                        <td>0.8 mm flat</td>
+                        <td>50~60 mm/min</td>
+                        <td>0.42-0.45 mm</td>
+                        <td>1.65 ~ 1.70 mm</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                <p>These settings are subject to change depending on the endmill that is being used or the type of PCB that is being milled.</p>
+                <br>
+                <p>After the gcode was generated, the gcode was then imported into the laptop connected to the stepcraft machine. Then, after setting up the endmill and the stepcraft machinne, the milling process begins. </p>
+
+
+                <video width="420" height="240" controls="">
+                    <source src="./IMG_5761.mp4" type="video/mp4">
+                  </video>
+                  <p><i>Slow mo video of the ISP being milled.</i></p>
+                  <br>
+
+                <p>As this is my first time milling a PCB, i was quite afraid that the cut would not work out. Unfornately, that turned out to be true as the traces were too thin to be soldered on, which made me to have to recut.</p>
+                
+                <figure>
+                    <img class="img-fluid" src="./deadisp.jpg" alt="">
+                    <figcaption>ISP board with terrible traces</figcaption>
+                </figure>
+                
+                <p>The next cut turned out better as I was able to find and use a better endmill to mill the pcb with. The endmill was sharper which caused the traces to be much cleaner.</p>
+
+                <figure>
+                    <img class="img-fluid" src="./isp.jpg" alt="">
+                    <figcaption>Better cleaner ISP board</figcaption>
+                </figure>
+
+
+
                 
             </div>
             <div class="col-lg-2"></div>

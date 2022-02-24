@@ -13,3 +13,7 @@ h1 {
 .nav-item a {
     color: #D2D91A;
 }
+
+th, td {
+    color: white;
+}
