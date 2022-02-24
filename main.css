@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+body {
+    font-family: "Oxygen" !important;
+    background-color: #2F3940;
+    color: white;
+}
+
+h1 {
+    color: #D2D91A;
+}
+
+.nav-item a {
+    color: #D2D91A;
+}

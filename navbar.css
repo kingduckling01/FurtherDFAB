@@ -4,19 +4,17 @@
     
 }
 
-.navbar{
-    background-color: lightgray;
-}
-
 .jerricks-navbar{
-    background-color: lightgray;
+    background-color: black;
 }
 
 .jerrick-item:hover{
     text-decoration: none !important;
     background-color: lightgray;
+}
 
-
+.dropdown-menu {
+    background-color: black;
 }
 
 .jerrick-item {
@@ -30,3 +28,4 @@
     background-color: transparent;
     border: 0;
 }
+
