@@ -50,8 +50,41 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <h1 ><u><strong>Embedded Programming</strong></u></h1>
-                <p>Welcome to my project web page. The purpose of this website is to document my progress and journey
-                    throughout the Further Digital Fabrication and Prototyping Fundamentals Module (EP1001)</p>
+                <h2>Programming our Hello Boards</h2>
+                <p>We were required to learn how to program our Hello Boards using Arduino IDE. 
+                    The assignment given to us was to program the hello board to do something, anything was allowed.
+                </p>
+                <h2>Software</h2>
+                <p>The software we were going to use to program was Arduino IDE. Using the previously made ISP programmer, it was now time to try to program my Hello Board 
+                    using the ISP Programmer. However, there were some things that I needed to add to the program first. Firstly, I needed to add in the attiny core. This was
+                    done by just opening up Arduino IDE, going to file, preferences, and copy pasting the link "http://drazzy.com/package_drazzy.com_index.json" under 
+                    "Additional Boards Manager URLs".
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./arduinopref.jpg" alt="">
+                    <figcaption>Pasting in the link</figcaption>
+                </figure>
+                <p>After that, I proceeded to install attiny core under tools, boards, boards manager.</p>
+                <figure>
+                    <img class="img-fluid" src="./boardmanger.jpg" alt="">
+                    <figcaption>Installing</figcaption>
+                </figure>
+                <h2>Programming the board</h2>
+                <p>A simple program was written and used to test if the Hello Board was even programmable in the first place.</p>
+                <figure>
+                    <img class="img-fluid" src="./goodcode.png" alt="">
+                    <figcaption>The code, courtesy of Lynn Myat "Makerspace Moe" Aung, fellow EP1001 classmate.</figcaption>
+                </figure>
+                <p>After the code was ready, instead of doing the usual way of uploading the program, I used upload using programmer instead, as I am using an ISP programmer.</p>
+                <p>This is how it turned out.</p>
+                <figure><video width="1260" height="720" controls="">
+                    <source src="./helloboardworking.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Video of the Hello Board working.</figcaption>
+                </figure>
+
+
+
                 
             </div>
             <div class="col-lg-2"></div>
