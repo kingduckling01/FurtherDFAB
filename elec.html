@@ -50,7 +50,7 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <h1><u><strong>Electronics Production and Design</strong></u></h1>
-                ,<br>
+                <br>
                 <h2>ISP Programmer</h2>
                 <p>In this part of the module, we were tasked to make a im-circuit programmer by milling and stuffing
                     the Printed Circuit Board and test it. We were provided an example ISP PSB design from our lecturer. One image was of the traces of the ISP and the other was of the outline of PCB.</p>
@@ -155,6 +155,212 @@
                     <li>2x3 pin ISP header x 1</li>
                     <li>6mm switch x 1</li>
                 </ul>
+
+                <p>As the components were already provided in the fablab, the only crucial thing that I needed to do was to solder the components
+                    on as neatly as possible. This was also one of my first times soldering, especially using SMD components on such a small 
+                    board, so I knew I had to be extra careful.
+                </p>
+                <P>insert image here</P>
+                <P>After a few tries and large amount of concentration, I finally finished soldering the components onto the board.</P>
+
+                <h2>Setting up board as ISP Programmer</h2>
+                <p>The following software are needed:
+
+                    GIT for windows
+                    Atmel GNU Toolchain
+                    GNU make
+                    avrdude
+                    Zadig
+                </p>
+                <p>In order to start, the first thing that we need to do is to change some things within the environment variables. Go to 
+                    System Properties, then Environment variables.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./envvar.jpg" alt="">
+                    <figcaption>Environment Variables</figcaption>
+                </figure>
+                <p>
+                    Next, we have to go into environment variables -> PATH, then edit it to add 3 new paths:
+                    
+                    <p>C:\Program Files\avrdude</p>
+                    <p>C:\Program Files\avr-gcc-10.1.0-x64-windows\bin</p>
+                    <p>C:\Program Files (x86)\GnuWin32\bin</p>
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./editenvvar.jpg" alt="">
+                    <figcaption>Changing the Environment Variables</figcaption>
+                </figure>
+                <p>Next, we have to download the necessary drivers. Using Zadig, download and install "libusb-win32" driver for the programmer.
+
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./zadig.png" alt="">
+                    <figcaption>Downloading Zadig</figcaption>
+                </figure>
+
+
+                <h2>Echo Hello World Boards</h2>
+                <br>
+
+                <p>
+                    Task: To redraw an echo hello-world board
+                <ul>
+                    <li>add (at least) a button and an LED (with current limiting resistor)</li>
+                    <li>check the design rules (ERC, DRC)</li>
+                    <li>make it</li>
+                    <li>test it</li>
+                </ul>
+                </p>
+                <h2>Autodesk Eagle</h2>
+                <P>After Eagle was installed, the next thing we needed to do was to add the Fablab EAGLE Library, which will contain the components that we have and will use 
+                    in the Fablab. In order to download and add the library, we first need to download the zip file, unzip it and move the contents into the eagle library folder.
+                </P>
+                <figure>
+                    <img class="img-fluid" src="./eaglelib.jpg" alt="">
+                    <figcaption>Eagle Library</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./eaglib2.jpg" alt="">
+                    <figcaption>Eagle Library</figcaption>
+                </figure>
+
+                <p>For the assignment, we had a choice to make a hello board using 3 different types of ATTiny Microcontrollers. 
+                    I chose to use the ATTiny45/85.
+                    </p>
+
+                <p>This is the schematic of the Hello Board that i followed.</p>
+                <figure>
+                    <img class="img-fluid" src="./t45_hello-board.png" alt="">
+                    <figcaption>Schematic</figcaption>
+                </figure>
+                <p>After creating a new project and schematic, the schematic workspace showed up. This was where i had to add in and connect components for my Hello Board.</p>
+                <figure>
+                    <img class="img-fluid" src="./schematicpage.jpg" alt="">
+                    <figcaption>Schematic Workspace</figcaption>
+                </figure>
+                <p>To add components to the workspace, click on the Add Part option located at the toolbar on the left side.</p>
+                <figure>
+                    <img class="img-fluid" src="./addpart.jpg" alt="">
+                    <figcaption>Adding a part</figcaption>
+                </figure>
+                <p>Ensure that the Fablab EAGLE Library is enabled at first before entering the parts panel.</p>
+                <figure>
+                    <img class="img-fluid" src="./enablefablib.jpg" alt="">
+                    <figcaption>Enabling Fab.lbr</figcaption>
+                </figure>
+                <p>After clicking on add part, all the installed and enabled libraries should show up in a panel, with different components in each library to choose from.</p>
+                <figure>
+                    <img class="img-fluid" src="./partchoose.jpg" alt="">
+                    <figcaption>Choosing a part to add</figcaption>
+                </figure>
+                <p>Search for components in the search bar below, in this case I am looking for the ATtiny45, therefore i just input in the search bar *ATtiny45*</p>
+                <figure>
+                    <img class="img-fluid" src="./addattiny45.jpg" alt="">
+                    <figcaption>Searching for ATtiny45</figcaption>
+                </figure>
+                <p>Next, simply click "OK" and click anywhere within the workspace to place the component down. Do the same for every other part that is needed.</p>
+                <figure>
+                    <img class="img-fluid" src="./placedownattiny.jpg" alt="">
+                    <figcaption>Placing the ATtiny45</figcaption>
+                </figure>
+                <p>After adding all the components down, we will now need to connect them with wires. By going to the toolbar on the left side again, click on "Net", which is a tool to add wires.</p>
+                <figure>
+                    <img class="img-fluid" src="./placingwire.jpg" alt="">
+                    <figcaption>Adding wiring</figcaption>
+                </figure>
+                <p>To connect to components together, simply click on one connection point of a component using the Net tool and drag it onto the other point. 
+                   After connecting all the components together, my schematic turned out like this.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./helloboardsch.jpg" alt="">
+                    <figcaption>Schematic of the Hello Board</figcaption>
+                </figure>
+                <p>Before I could move on to doing the physical traces of the board, an ERC(Electrical Rule Check) is done to ensure that there is no error in the connections of the circuit.
+                    The ERC is located under "Tools" at the top bar.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./erc.jpg" alt="">
+                    <figcaption>ERC</figcaption>
+                </figure>
+                <p>Once the ERC is done, I can now move onto configuring the physical board layout, which is done by clicking on the switch to board/schematic button. 
+                    If no board was created previously, the system will prompt if a new board was to be created off the current schematic.</p>
+                <figure>
+                    <img class="img-fluid" src="./switchingtoboard.jpg" alt="">
+                    <figcaption>Generate/Switch to board button</figcaption>
+                </figure>
+                <br>
+                <figure>
+                    <img class="img-fluid" src="./boardwarning.jpg" alt="">
+                    <figcaption>Warning to create a new board</figcaption>
+                </figure>
+                <p>After that, Eagle would automatically bring forward the Board workspace. This is where adjustments to the physical board were to be made.</p>    
+                <figure>
+                    <img class="img-fluid" src="./boardworkspace.jpg" alt="">
+                    <figcaption>Board workspace</figcaption>
+                </figure>
+                <p>The board layout I would be following is the one that was provided by the lecturer.</p>
+                <figure>
+                    <img class="img-fluid" src="./boardexample.png" alt="">
+                    <figcaption>Board layout</figcaption>
+                </figure>
+                <p>When the new board was created, the components would already be laid out at the corner of the workspace. I just simply needed to drag in the components and arrange them to my liking.
+                    In order to connect the components together here, I would need to use the "Route Airwire" tool to place down wires. 
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./routeairwire.jpg" alt="">
+                    <figcaption>Route Airwire</figcaption>
+                </figure>
+                <p>After all the connections were made, the board turned out like this.</p>
+                <figure>
+                    <img class="img-fluid" src="./boardlayout.jpg" alt="">
+                    <figcaption>Board layout</figcaption>
+                </figure>
+                <p>Next, I had to export the traces of the board into an image in order to convert into gcode for the machine to recognise.
+                    Before I did that, I ensured that only the top layer is shown, so that only the traces would be exported. I also did the same for the board outline.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./layersettings.jpg" alt="">
+                    <figcaption>Traces layer</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./layersettingsmilling.jpg" alt="">
+                    <figcaption>Outline layer</figcaption>
+                </figure>
+                <p>When exporting the image, ensure that the resolution is 1500 dpi and the monochrome option is checked as well.</p>
+                <figure>
+                    <img class="img-fluid" src="./exportingimage.jpg" alt="">
+                    <figcaption>Export options</figcaption>
+                </figure>
+                <p>After export, the images turned out like this.</p>
+                <figure>
+                    <img class="img-fluid" src="./toplayerupdated.png" alt="">
+                    <figcaption>Top Layer</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./outlinelayer.png" alt="">
+                    <figcaption>Outline Layer</figcaption>
+                </figure>
+                <p>After putting the image through mods and generating the gcode, the board was ready to be milled.</p>
+                <figure>
+                    <img class="img-fluid" src="./helloboardmill.jpg" alt="">
+                    <figcaption>Milling</figcaption>
+                </figure>
+                <p>This is how the Hello Board looks like after soldering the components on.</p>
+                <figure>
+                    <img class="img-fluid" src="./helloboardcomplete.jpg" alt="">
+                    <figcaption>Finished Board</figcaption>
+                </figure>
+                <p>With that, the Hello Board is complete. Some things that I would definitely improve on is the soldering. A lot of the pins had way too much solder
+                    than needed and that caused it to look less nice, as well as increased the risk of having a short connection. Next time, I would try to use as little solder as possible.
+                </p>
+
+
+
+
+
+
+
+
 
 
 
