@@ -49,9 +49,109 @@
         <div class="row belownav">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-                <h1 class="text-secondary"><u><strong>3D Machining</strong></u></h1>
-                <p>Lorem</p>
+                <h1 class="text-secondary"><u><strong>3D Computer Controlled Machining</strong></u></h1>
+                <h2>3D Machining</h2>
+                <p>3D Machining is basically 2D machining but with 3 axes, x, y and z, instead of 2. The assignment given to us was:
+                    <ul>
+                        <li>review the safety data sheets for each of your molding and casting materials</li>
+                        <li>design a mold around the stock and tooling that you’ll be using,</li>
+                        <li>mill it (rough cut + (at least) three-axis finish cut),</li>
+                        <li>and use it to cast parts</li>
+                      </ul>
+                </p>
+                <h2>Creating the model</h2>
+                <p>Firstly, what I did was to create the model of the object that I wanted to mold. I decided to go 
+                    with something simple and easy, something along the lines of a hemisphere sitting ontop of a block, 
+                    which can someone be identified as a spinning top.  
+                </p>
+                <p>Firstly, I created the hemisphere that was suppposed to sit on top of a block.</p>
+                <figure>
+                    <img class="img-fluid" src="./createsphere.jpg" alt="">
+                    <figcaption>Hemisphere</figcaption>
+                </figure>
+                <p>Then, I created the area that sphere would sit in.</p>
+                <figure>
+                    <img class="img-fluid" src="./createfloor.jpg" alt="">
+                    <figcaption>Bottom area</figcaption>
+                </figure>
+                <p>After that, I created a box by extruding the sides of the floor.</p>
+                <figure>
+                    <img class="img-fluid" src="./createbox.jpg" alt="">
+                    <figcaption>Rectangular box</figcaption>
+                </figure>
+                <p>After getting this out, I realised that the hemisphere was a tad too big, which led me to make it smaller.</p>
+                <figure>
+                    <img class="img-fluid" src="./resizesphere.jpg" alt="">
+                    <figcaption>Resizing the hemisphere</figcaption>
+                </figure>
+                <p>Next, I made some adjustments to the block below the sphere.</p>
+                <figure>
+                    <img class="img-fluid" src="./readjustblock.jpg" alt="">
+                    <figcaption>Readjusting the block</figcaption>
+                </figure>
+                <p>This is how the final model turned out to be.</p>
+                <figure>
+                    <img class="img-fluid" src="./moldfinallook.jpg" alt="">
+                    <figcaption>Final look</figcaption>
+                </figure>
+                <iframe src="https://ichat2020.autodesk360.com/shares/public/SH35dfcQT936092f0e43da38697cebbcecbf?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <br>
+                <h2>Generating G-code</h2>
+                <p>After the model was complete, I proceeded to generate the gcode for the model. To do that, I change the workspace to manufacturing by going to the top left hand side of the navigation bar.</p>
+                <figure>
+                    <img class="img-fluid" src="./manufacture.jpg" alt="">
+                    <figcaption>Changing workspaces</figcaption>
+                </figure>
+                <p>As the machine that we are using to CNC is the STEPCRAFT D420, I needed to download the STEPCRAFT UCCNC post processer. </p>
+                <p>After that was settled, I made a new setup and chose pocket clearing toolpath operation which can be found under the 3D tab.</p>
+                <figure>
+                    <img class="img-fluid" src="./manusetup.jpg" alt="">
+                    <figcaption>New Setup</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./pocketclearing.jpg" alt="">
+                    <figcaption>Pocket Clearing</figcaption>
+                </figure>
+                <br>
+                <p>These are the settings I used.</p>
+                <figure>
+                    <img class="img-fluid" src="./pocketsettings1.jpg" alt="">
+                    <img class="img-fluid" src="./pocketsettings2.jpg" alt="">
+                    <img class="img-fluid" src="./pocketsettings3.jpg" alt="">
+                    <img class="img-fluid" src="./pocketsettings4.jpg" alt="">
+                    <img class="img-fluid" src="./pocketsettings5.jpg" alt="">
+                    <img class="img-fluid" src="./pocketsettings6.jpg" alt="">
+                    <figcaption>Settings</figcaption>
+                </figure>
+                <p>After that, a simulation was done to see how the mode would be cut. I used this opportunity to check for any errors as well.</p>
+                <figure>
+                    <img class="img-fluid" src="./pocketsim.jpg" alt="">
+                    <figcaption>Simulation</figcaption>
+                </figure>
+                <p>Finally, I clicked NC program, located near the top left of the nav bar, and changed the post to the previously downloaded STEPCRAFT UCCNC. 
+                    The G-code is then ready to be generated.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./moldpost.jpg" alt="">
+                    <figcaption>Changing the post</figcaption>
+                </figure>
+                <br>
+                <h2>Milling</h2>
+                <p>After generating the gcode, I put it into the machine and began the milling of the model. In this case, a dense blue styrofoam block was used as the material to be milled. </p>
+                <figure>
+                    <img class="img-fluid" src="./moldmilling.jpg" alt="">
+                    <figcaption>Milling the mold</figcaption>
+                </figure>
+                <p>After about 45 minutes to 1 hour of waiting, the milling was completed and the model was done.</p>
+                <figure>
+                    <img class="img-fluid" src="./moldfinished.jpg" alt="">
+                    <figcaption>How it looks</figcaption>
+                </figure>
+               
                 
+
+
+
             </div>
             <div class="col-lg-2"></div>
         </div>
