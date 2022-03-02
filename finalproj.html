@@ -58,8 +58,17 @@
                     as I lacked knowledge on the microcontroller chips that the Fablab had to offer. As my stream deck will be connected to the computer, usb compatability had to 
                     be there in order for it to work in the first place. However, the microcontrollers did not have any hardware usb compatability. This was where the workaround 
                     came in. There were two ways to get usb compatability. I went with the first, which is to use v-usb, a software-only implementation of a low-speed USB device 
-                    for Atmel's AVR® microcontrollers, making it possible to build USB hardware with almost any AVR® microcontroller, not requiring any additional chip.
+                    for Atmel's AVR® microcontrollers, making it possible to build USB hardware with almost any AVR® microcontroller, not requiring any additional chip. The microcontroller
+                    that I ended up using was the ATMega328. 
                 </p>
+                <p>My intended design of the PCB was to use ISP headers as placeholders for the connection pads to be cut out when milling, so that I can directly wire the switches to the board.
+                    Combine that with the HID Keys basic circuit layout, a resonator as we did not use crystals, we have the entire circuit.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/firstschematic.jpg" alt="">
+                    <figcaption>Schematic</figcaption>
+                </figure>
+
                 
             </div>
             <div class="col-lg-2"></div>
