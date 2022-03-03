@@ -68,7 +68,93 @@
                     <img class="img-fluid" src="./finalproj/firstschematic.jpg" alt="">
                     <figcaption>Schematic</figcaption>
                 </figure>
-                <p>The board had some issues at first, as the components were taking up more space than it should.</p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/firstboard.jpg" alt="">
+                    <figcaption>Board</figcaption>
+                </figure>
+                <p>The board had some issues at first, as the components were taking up more space than it should. With the help of my lecturer, the board was redesigned and 
+                    rearranged to take up less space and make it more compact.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/secondboard.jpg" alt="">
+                    <figcaption>Board</figcaption>
+                </figure>
+                <p>At this point in time, I thought that I was all good to go. I readied up the PCB gcode and milled out a successful clean board. I even soldered on all the important
+                    components first before I realised I had made a few huge mistakes. One major mistake that I made was not considering how was I going to program the board. The ISP header 
+                    connections were not connected to the right pins on the ATMega328 at all and this made it such that the microcontroller was not programmable. This led me to hard wire the
+                    connections instead, stretching and connecting wires across the board, making it very messy. Second mistake was that the D+ and D- pins of the USB header were not connected 
+                    to the right pins, the current connection was incorrect in such a way that the USB header was not dectable at all. Noticing all these mistakes, another board was created.
+                </p>
+                <p>Lynn, my classmate, helped me a lot from this point onward as his project was similar to mine. This new board was also mostly due to his efforts.</p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/secondboard.jpg" alt="">
+                    <figcaption>Board</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/secondschematic.jpg" alt="">
+                    <figcaption>Schematic</figcaption>
+                </figure>
+                <p>After all the repeated failures before this board, this seemed to hold more promise in working out succesfully. It was time to move on to the milling of the PCB.</p>
+                <br>
+                <h2>PCB Machining</h2>
+                <p>As usual, the program that I used to generate all my PCB gcodes is mods. All the gcodes I created are generally the same settings, except that I tweaked the tool diameter
+                    a few times just to see how thin in needs to be in order to get all the traces out just right.
+                </p>
+                <p>Here are the previous boards that did not work</p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/streamdeck3.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/streamdeck5.png" alt="">
+                    <figcaption>Previous boards</figcaption>
+                </figure>
+                <p>After configuring the settings in mods, this is the result I got. </p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/mods.jpg" alt="">
+                    <figcaption>Image used</figcaption>
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/mods2.jpg" alt="">
+                    <figcaption>Result</figcaption>
+                </figure>
+                <p>Now that I have my gcode, I was ready to mill the PCB out. Before the attempt to mill this new board, I already had many past attempts on milling the
+                    previous boards, many of which failed. Here are most of them.
+                </p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb1.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb2.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb3.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb4.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb5.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb6.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb7.jpg" alt="">
+                </figure>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/failpcb8.jpg" alt="">
+                </figure>
+                <p>For all of these failed PCBs, some of them the drill was cutting to deep, causing the traces to not appear at all, while others
+                    the traces were too thin and had too much burr, causing it to be unable to be soldered on.
+                </p>
+                <p>After painstakingly milling the PCBs again and again, I finally ended up with a decent looking one.</p>
+                <figure>
+                    <img class="img-fluid" src="./finalproj/decentpcb.jpg" alt="">
+                    <figcaption>Finally got a decent looking PCB milled</figcaption>
+                </figure>
+
+
+
 
                 
             </div>
