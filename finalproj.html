@@ -184,6 +184,12 @@
                     <img class="img-fluid" src="./finalproj/hardwire.jpg" alt="">
                     <figcaption>Hardwiring some connections</figcaption>
                 </figure>
+                <p>When checking for whether the board can even be detected by the laptop, there was something wrong with the connections and the board could not be detected.
+                    Despite my effort to try and salavge my board, it was to no avail. I had no choice but to cut a new board at this point. After cutting out a new board, the 
+                    soldering of this board went smoothly and the components were mostly intact. However, despite several tests and trying to debunk the problem, the same problem
+                    persisted, which is that the USB device was not recognised. When checked with avrdude, the specifc signal for the Atmega328 was correct and the chip had no issues.
+                    This led me to suspect that it was something to do with the V-usb library. The board could be programmed as a normal Arduino, just not capable for usb purposes. 
+                </p>
 
 
 
